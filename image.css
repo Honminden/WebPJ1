@@ -1,0 +1,13 @@
+#popular p
+{
+    display: inline;
+    background-color: #bb0000;
+    color: white;
+    padding: 5px;
+}
+
+#popular img
+{
+    width: 100%;
+    height: 100%;
+}

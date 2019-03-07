@@ -1,0 +1,197 @@
+/*  iconfont  */
+@font-face
+{
+    font-family: Iconfont;
+    src: url("fonts/Iconfont.woff") format("woff");
+}
+
+.iconfont
+{
+    font-family: Iconfont;
+    font-size: 27px;
+    padding: 5px;
+    color: #000000;
+    text-decoration: none;
+    
+    z-index: 4;
+}
+/*  iconfont  */
+
+
+/*  logo    */
+#logo
+{
+    font-size: 100px;
+    color: #aa0022;
+}
+/*  logo    */
+
+
+/*  top navigation bar  */
+#top_nav
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 10px 90px 90px;
+    
+    background: rgba(255,255,255,0.5) content-box;
+    
+    z-index: 3;
+}
+
+@keyframes topNavBrighten
+{
+    to
+    {
+        background-color: rgba(255,255,255,0.9);
+    }
+}
+
+#top_nav:hover
+{
+    animation: topNavBrighten 300ms ease-in-out forwards;
+}
+
+@keyframes topIconEnlarge
+{
+    to
+    {
+        font-size: 30px;
+        color: #444444;
+    }
+}
+
+#top_nav:hover a
+{
+    animation: topIconEnlarge 300ms ease-in-out forwards;
+}
+
+#top_nav:hover a:hover
+{
+    font-size: 33px;
+    border: 0 solid #666666;
+    border-radius: 33px;
+}
+/*  top navigation bar  */
+
+
+/*  top navigation icons    */
+    /*  home    */
+@keyframes homeSelected
+{
+    to
+    {
+        border: 3px inset #bb0000;
+        color: #bb0000;
+    }
+}
+
+#top_nav:hover #home:hover
+{
+    animation: homeSelected 150ms ease-in-out forwards;
+}
+    /*  home    */
+
+
+    /*  login   */
+@keyframes loginSelected
+{
+    to
+    {
+        border: 3px inset #0044cc;
+        color: #0044cc;
+    }
+}
+
+#top_nav:hover #login:hover
+{
+    animation: loginSelected 150ms ease-in-out forwards;
+}
+    /*  login   */
+
+
+    /*  cart    */
+@keyframes cartSelected
+{
+    to
+    {
+        border: 3px inset #dd6600;
+        color: #dd6600;
+    }
+}
+
+#top_nav:hover #cart:hover
+{
+    animation: cartSelected 150ms ease-in-out forwards;
+}
+    /*  cart    */
+
+
+    /*  collection  */
+@keyframes collectionSelected
+{
+    to
+    {
+        border: 3px inset #ddaa00;
+        color: #ddaa00;
+    }
+}
+
+#top_nav:hover #collection:hover
+{
+    animation: collectionSelected 150ms ease-in-out forwards;
+}
+    /*  collection  */
+
+
+    /*  language    */
+@keyframes languageSelected
+{
+    to
+    {
+        border: 3px inset #339900;
+        color: #339900;
+    }
+}
+
+#top_nav:hover #language:hover
+{
+    animation: languageSelected 150ms ease-in-out forwards;
+}
+    /*  language    */
+
+
+    /*  help    */
+@keyframes helpSelected
+{
+    to
+    {
+        border: 3px inset #009977;
+        color: #009977;
+    }
+}
+
+#top_nav:hover #help:hover
+{
+    animation: helpSelected 150ms ease-in-out forwards;
+}
+    /*  help    */
+
+
+    /*  search  */
+@keyframes searchSelected
+{
+    to
+    {
+        border: 3px inset #6600aa;
+        color: #6600aa;
+    }
+}
+
+#top_nav:hover #search:hover
+{
+    animation: searchSelected 150ms ease-in-out forwards;
+}
+    /*  search  */
+/*  top navigation icons    */
