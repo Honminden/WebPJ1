@@ -12,7 +12,7 @@ function validate(element)
     {
         label = labels[0];
 
-        if (/[0-9]/.test(element.value) && /[a-z]/.test((element.value)) && element.value.length >= 6)
+        if (/[0-9]/.test(element.value) && /[A-z]/.test((element.value)) && element.value.length >= 6)
         {
             sSpanWrapHead = "<span style='color: #009900'>";
             sIfValid = "(√)";
