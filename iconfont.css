@@ -23,6 +23,8 @@
 {
     font-size: 100px;
     color: #aa0022;
+    
+    user-select: none;
 }
 /*  logo    */
 
@@ -37,7 +39,41 @@
     
     background: rgba(255,255,255,0.5) content-box;
     
+    user-select: none;
+    
     z-index: 3;
+}
+
+#top_nav form
+{
+    display: none;
+    
+    position: absolute;
+    top: 40px;
+    padding: 30px;
+    
+    background: rgba(255,255,255,0.9) content-box;
+    
+    z-index: 3;
+}
+
+#top_nav label
+{
+    display: block;
+    
+    position: relative;
+    left: 5px;
+}
+
+#top_nav input
+{
+    display: block;
+    
+    margin: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #666666;
+    border-radius: 10%/100%;
 }
 
 @keyframes topNavBrighten
@@ -53,7 +89,7 @@
     animation: topNavBrighten 300ms ease-in-out forwards;
 }
 
-@keyframes topIconEnlarge
+@keyframes IconEnlargeBrighten
 {
     to
     {
@@ -62,15 +98,17 @@
     }
 }
 
-#top_nav:hover a
+#top_nav:hover a.iconfont
 {
-    animation: topIconEnlarge 300ms ease-in-out forwards;
+    animation: IconEnlargeBrighten 300ms ease-in-out forwards;
 }
 
-#top_nav:hover a:hover
+#top_nav:hover a.iconfont:hover
 {
     font-size: 33px;
-    border: 0 solid #666666;
+    border-width: 0px;
+    border-style: solid;
+    border-color: #666666;
     border-radius: 33px;
 }
 /*  top navigation bar  */
@@ -82,7 +120,9 @@
 {
     to
     {
-        border: 3px inset #bb0000;
+        border-width: 3px;
+        border-style: inset;
+        border-color: #bb0000;
         color: #bb0000;
     }
 }
@@ -99,7 +139,9 @@
 {
     to
     {
-        border: 3px inset #0044cc;
+        border-width: 3px;
+        border-style: inset;
+        border-color: #0044cc;
         color: #0044cc;
     }
 }
@@ -107,6 +149,16 @@
 #top_nav:hover #login:hover
 {
     animation: loginSelected 150ms ease-in-out forwards;
+}
+
+#top_nav:hover #login:hover+form, #top_nav:hover #login+form:hover
+{
+    display: block;
+}
+
+#top_nav:hover #login:hover+form label,form:hover label
+{
+    display: block;
 }
     /*  login   */
 
@@ -116,7 +168,9 @@
 {
     to
     {
-        border: 3px inset #dd6600;
+        border-width: 3px;
+        border-style: inset;
+        border-color: #dd6600;
         color: #dd6600;
     }
 }
@@ -133,7 +187,9 @@
 {
     to
     {
-        border: 3px inset #ddaa00;
+        border-width: 3px;
+        border-style: inset;
+        border-color: #ddaa00;
         color: #ddaa00;
     }
 }
@@ -150,7 +206,9 @@
 {
     to
     {
-        border: 3px inset #339900;
+        border-width: 3px;
+        border-style: inset;
+        border-color: #339900;
         color: #339900;
     }
 }
@@ -167,7 +225,9 @@
 {
     to
     {
-        border: 3px inset #009977;
+        border-width: 3px;
+        border-style: inset;
+        border-color: #009977;
         color: #009977;
     }
 }
@@ -184,7 +244,9 @@
 {
     to
     {
-        border: 3px inset #6600aa;
+        border-width: 3px;
+        border-style: inset;
+        border-color: #6600aa;
         color: #6600aa;
     }
 }

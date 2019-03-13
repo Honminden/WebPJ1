@@ -17,6 +17,7 @@ h1
 small
 {
     font-size: 20px;
+    color: #444444;
 }
 
 hr
@@ -27,6 +28,8 @@ hr
 header
 {
     background: url("images/works/large/073020.jpg") no-repeat top right;
+    
+    box-shadow: 0 0 5px #000000;
 }
 
 footer
