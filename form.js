@@ -3,6 +3,7 @@ function validate(element)
     var isOK = false;
     var labels = document.querySelectorAll("#sign_up label.validation");
     var label;
+    var inputs = document.querySelectorAll("#sign_up input");
     var sSpanWrapHead = "";
     var sIfValid = "";
     var sInvalidType = "";
@@ -45,7 +46,7 @@ function validate(element)
     else if (element.id === "password") 
     {
         label = labels[1];
-        var username = document.querySelectorAll("#sign_up input")[0];
+        var username = inputs[0];
 
         if (element.value.length >= 6 && element.value !== username.value)
         {
@@ -76,15 +77,15 @@ function validate(element)
 
         sSpanWrapEnd = "</span>";
 
-        if (document.querySelectorAll("#sign_up input")[2].value.length > 0)
+        if (inputs[2].value.length > 0)
         {
-            validate(document.querySelectorAll("#sign_up input")[2]);
+            validate(inputs[2]);
         }
     }
     else if (element.id === "conform_password")
     {
         label = labels[2];
-        var password = document.querySelectorAll("#sign_up input")[1];
+        var password = inputs[1];
 
         if (element.value === password.value && password.value.length >= 6)
         {
@@ -164,14 +165,45 @@ function validate(element)
     return isOK;
 }
 
+var divLogin;
+var divSignUp;
+var spans;
+
 function submitCheck(element)
 {
-    var isOK = true;
-
-    for (var i = 0; i <= 4; i++)
+    if (divLogin.style.display === "none")
     {
-        isOK = isOK && validate(document.querySelectorAll("#sign_up input")[i]);
-    }
+        var isOK = true;
 
-   return isOK;
+        for (var i = 0; i <= 4; i++)
+        {
+            isOK = isOK && validate(document.querySelectorAll("#sign_up input")[i]);
+        }
+
+        return isOK;
+    }
+}
+
+function displayLogin(element)
+{
+    divLogin = document.querySelector("#top_nav form #login");
+    divSignUp = document.querySelector("#top_nav form #sign_up");
+    spans = document.querySelectorAll("#top_nav form>span");
+
+    divLogin.style.display = "block";
+    divSignUp.style.display = "none";
+
+    spans[0].style.textDecoration = "#000000 solid underline";
+    spans[1].style.textDecoration = "none";
+
+}
+
+function displaySignUp(element)
+{
+    divLogin.style.display = "none";
+    divSignUp.style.display = "block";
+
+
+    spans[0].style.textDecoration = "none";
+    spans[1].style.textDecoration = "#000000 solid underline";
 }

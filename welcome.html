@@ -5,50 +5,69 @@
   <title>HMD Art, the best online gallery</title>
   <link rel="stylesheet" type="text/css" href="base.css">
   <script src="form.js"></script>
+  <script src="image.js"></script>
 </head>
 <body>
-    <header>
+    <header class="linearBackground">
         <h1>
             <a class="iconfont" id="logo">B</a>
             HMD Art&trade; <small>, the best online gallery</small>
         </h1>
 
-        <nav id="top_nav">
+        <nav id="top_nav" class="linearBackground">
             <a id="home" class="iconfont" href="https://www.amazon.com">M</a>
 
-            <a id="login" class="iconfont" href="https://www.amazon.com">I</a>
-            <form id="sign_up" novalidate onsubmit="return submitCheck(this)">
-                <label for="username">
-                    Username
-                </label>
-                <label class="validation"></label>
-                <input id="username" name="username" type="text" oninput="validate(this)">
+            <a id="user" class="iconfont" href="https://www.amazon.com">I</a>
+            <form class="linearBackground" novalidate onsubmit="return submitCheck(this)">
+                <span onclick="displayLogin(this)">Login</span>
+                <span onclick="displaySignUp(this)">Sign up</span>
 
-                <label for="password">
-                    Password
-                </label>
-                <label class="validation"></label>
-                <input id="password" name="password" type="password" oninput="validate(this)">
+                <div id="sign_up">
+                    <label for="username">
+                        Username
+                    </label>
+                    <label class="validation"></label>
+                    <input id="username" name="username" type="text" oninput="validate(this)" autocomplete="off">
 
-                <label for="conform_password">
-                    Conform Pwd.
-                </label>
-                <label class="validation"></label>
-                <input id="conform_password" name="conform_password" type="password" oninput="validate(this)">
+                    <label for="password">
+                        Password
+                    </label>
+                    <label class="validation"></label>
+                    <input id="password" name="password" type="password" oninput="validate(this)" autocomplete="off">
 
-                <label for="email">
-                    Email
-                </label>
-                <label class="validation"></label>
-                <input id="email" name="email" type="email" oninput="validate(this)">
+                    <label for="conform_password">
+                        Conform Pwd.
+                    </label>
+                    <label class="validation"></label>
+                    <input id="conform_password" name="conform_password" type="password" oninput="validate(this)" autocomplete="off">
 
-                <label for="agree">
-                    I agree on the <a href="https://www.amazon.com">terms of use</a>.
-                </label>
-                <label class="validation"></label>
-                <input id="agree" name="agree" type="checkbox">
+                    <label for="email">
+                        Email
+                    </label>
+                    <label class="validation"></label>
+                    <input id="email" name="email" type="email" oninput="validate(this)" autocomplete="off">
+
+                    <label for="agree">
+                        I agree on the <a href="https://www.amazon.com">terms of use</a>.
+                    </label>
+                    <label class="validation"></label>
+                    <input id="agree" name="agree" type="checkbox">
+                </div>
+
+                <div id="login">
+                    <label for="username">
+                        Username
+                    </label>
+                    <input id="username" name="username" type="text" autocomplete="off">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input id="password" name="password" type="password" autocomplete="off">
+                </div>
 
                 <input name="submit" type="submit" value="submit">
+
+                <script>displayLogin();</script>
             </form>
 
             <a id="cart" class="iconfont" href="https://www.amazon.com">K</a>
@@ -72,15 +91,17 @@
                 POPULAR
             </h2>
 
-            <nav>
+            <nav class="linearBackground">
                 <a href="https://www.amazon.com">
-                    <img src="images/works/large/111030.jpg" alt="popular works">
+                    <img alt="popular works">
                 </a>
             </nav>
-
+            <script>
+                startSwitch();
+            </script>
         </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
     </main>
 
     <hr>

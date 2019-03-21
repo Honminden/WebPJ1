@@ -8,12 +8,6 @@
 .iconfont
 {
     font-family: Iconfont;
-    font-size: 27px;
-    padding: 5px;
-    color: #000000;
-    text-decoration: none;
-    
-    z-index: 4;
 }
 /*  iconfont  */
 
@@ -44,38 +38,6 @@
     z-index: 3;
 }
 
-#top_nav form
-{
-    display: none;
-    
-    position: absolute;
-    top: 40px;
-    padding: 30px;
-    
-    background: rgba(255,255,255,0.9) content-box;
-    
-    z-index: 3;
-}
-
-#top_nav label
-{
-    display: block;
-    
-    position: relative;
-    left: 5px;
-}
-
-#top_nav input
-{
-    display: block;
-    
-    margin: 5px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #666666;
-    border-radius: 10%/100%;
-}
-
 @keyframes topNavBrighten
 {
     to
@@ -87,6 +49,75 @@
 #top_nav:hover
 {
     animation: topNavBrighten 300ms ease-in-out forwards;
+}
+
+#top_nav form
+{
+    display: none;
+    
+    position: absolute;
+    top: 40px;
+    padding: 30px;
+    
+    background-clip: content-box;
+    
+    z-index: 3;
+}
+
+#top_nav form>span
+{
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.5);
+    
+    padding: 0 0.5em;
+    
+    cursor: pointer;
+}
+
+#top_nav form>span:hover
+{
+    background-color: rgba(255,255,255,0.9);
+}
+
+#top_nav label
+{
+    display: block;
+    
+    padding: 0 0.5em;
+}
+
+#top_nav input:not([type="submit"])
+{
+    display: block;
+    
+    text-indent: 1em;
+    margin: 1em;
+    border-radius: 10%/100%;
+}
+
+#top_nav input[type="submit"]
+{
+    font-size: large;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.5);
+    
+    padding: 0.5em;
+}
+
+#top_nav input[type="submit"]:hover
+{
+    background-color: rgba(255,255,255,0.9);
+}
+
+#top_nav a.iconfont
+{
+    font-size: 27px;
+    padding: 5px;
+    color: #000000;
+    text-decoration: none;
+    
+    z-index: 4;
 }
 
 @keyframes IconEnlargeBrighten
@@ -134,7 +165,7 @@
     /*  home    */
 
 
-    /*  login   */
+    /*  user   */
 @keyframes loginSelected
 {
     to
@@ -146,21 +177,21 @@
     }
 }
 
-#top_nav:hover #login:hover
+#top_nav:hover #user:hover
 {
     animation: loginSelected 150ms ease-in-out forwards;
 }
 
-#top_nav:hover #login:hover+form, #top_nav:hover #login+form:hover
+#top_nav:hover #user:hover+form, #top_nav:hover #user+form:hover
 {
     display: block;
 }
 
-#top_nav:hover #login:hover+form label,form:hover label
+#top_nav:hover #user:hover+form label,form:hover label
 {
     display: block;
 }
-    /*  login   */
+    /*  user   */
 
 
     /*  cart    */

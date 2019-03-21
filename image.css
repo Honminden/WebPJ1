@@ -7,19 +7,59 @@
     border-style: solid;
     border-color: #bb0000;
     border-radius: 25%/100%;
+    position: relative;
+    
+    z-index: 3;
     
     box-shadow: 0 0 5px #000000;
     
     user-select: none;
 }
 
+#popular nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    right: 0;
+    height: 80vmin;
+}
+
 #popular img
 {
-    width: 80%;
-    height: 80%;
+    max-width: 80vw;
+    max-height: 80vmin;
     position: relative;
-    top: 30px;
-    left: 10%;
+    box-shadow: 0 0 4vmin #000000;
     
-    box-shadow: 0 0 20px #000000;
+    animation: switchImage 5000ms ease-in-out infinite;
+}
+
+@keyframes switchImage
+{
+    0%
+    {
+        opacity: 0;
+    }
+    5%
+    {
+        opacity: 0;
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    90%
+    {
+        opacity: 1;
+    }
+    95%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
 }

@@ -8,15 +8,23 @@
     box-sizing: border-box;
 }
 
-h1
+input
 {
-    background: rgba(255,255,255,0.8);
-    font-size: 60px;
+    outline: none;
 }
 
-small
+input[type="button"], input[type="submit"], input[type="checkbox"], input[type="radio"], select:hover {
+    cursor: pointer;
+}
+
+h1
 {
-    font-size: 20px;
+    font-size: 3em;
+}
+
+h1 small
+{
+    font-size: 0.3em;
     color: #444444;
 }
 
@@ -27,13 +35,18 @@ hr
 
 header
 {
-    background: url("images/works/large/073020.jpg") no-repeat top right;
+    
     
     box-shadow: 0 0 5px #000000;
 }
 
 footer
 {
-    font-size: 20px;
+    font-size: 1em;
     color: #444444;
+}
+
+.linearBackground
+{
+    background: linear-gradient(to right, rgba(239,239,239,0.5), rgba(223,223,223,0.9), rgba(239,239,239,0.5));
 }
