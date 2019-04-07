@@ -15,10 +15,36 @@
 /*  logo    */
 #logo
 {
-    font-size: 100px;
+    display: inline-block;
+    font-size: 2em;
     color: #aa0022;
+    padding: 0 0.1em;
+    
+    cursor: pointer;
     
     user-select: none;
+}
+
+@keyframes logoAnimation
+{
+    0%
+    {
+        color: #aa0022;
+    }
+    50%
+    {
+        color: #000000;
+        transform: rotateY(90deg);
+    }
+    100%
+    {
+        color: #aa0022;
+    }
+}
+
+h1:hover #logo
+{
+    animation:logoAnimation 2500ms ease-in-out infinite;
 }
 /*  logo    */
 
@@ -35,7 +61,7 @@
     
     user-select: none;
     
-    z-index: 3;
+    z-index: 4;
 }
 
 @keyframes topNavBrighten
@@ -56,28 +82,37 @@
     display: none;
     
     position: absolute;
-    top: 40px;
-    padding: 30px;
+    top: 2em;
+    right: 0;
+    padding: 0.5em 3em 3em 3em;
     
     background-clip: content-box;
+    overflow-scrolling: auto;
     
-    z-index: 3;
+    z-index: -1;
 }
 
-#top_nav form>span
+#top_nav form span
 {
+    display: inline-block;
+    
     font-size: large;
     font-weight: bold;
     background-color: rgba(255,255,255,0.5);
     
-    padding: 0 0.5em;
+    padding: 0.5em;
     
     cursor: pointer;
 }
 
-#top_nav form>span:hover
+#top_nav form span:hover
 {
     background-color: rgba(255,255,255,0.9);
+}
+
+#top_nav form #detail #welcome
+{
+    padding: 0.5em;
 }
 
 #top_nav label
@@ -91,8 +126,9 @@
 {
     display: block;
     
+    font-size: 1em;
     text-indent: 1em;
-    margin: 1em;
+    margin: 0.5em;
     border-radius: 10%/100%;
 }
 
@@ -109,22 +145,27 @@
 {
     background-color: rgba(255,255,255,0.9);
 }
+/*  top navigation bar  */
 
+
+/*  top navigation icons    */
+
+    /*  general */
 #top_nav a.iconfont
 {
-    font-size: 27px;
+    font-size: 1em;
     padding: 5px;
     color: #000000;
     text-decoration: none;
     
-    z-index: 4;
+    z-index: 5;
 }
 
 @keyframes IconEnlargeBrighten
 {
     to
     {
-        font-size: 30px;
+        font-size: 1.2em;
         color: #444444;
     }
 }
@@ -136,22 +177,20 @@
 
 #top_nav:hover a.iconfont:hover
 {
-    font-size: 33px;
-    border-width: 0px;
-    border-style: solid;
+    font-size: 1.5em;
+    border-width: 0;
+    border-style: inset;
     border-color: #666666;
     border-radius: 33px;
 }
-/*  top navigation bar  */
+    /*  general */
 
-
-/*  top navigation icons    */
     /*  home    */
 @keyframes homeSelected
 {
     to
     {
-        border-width: 3px;
+        border-width: 0.2em;
         border-style: inset;
         border-color: #bb0000;
         color: #bb0000;
@@ -170,7 +209,7 @@
 {
     to
     {
-        border-width: 3px;
+        border-width: 0.2em;
         border-style: inset;
         border-color: #0044cc;
         color: #0044cc;
@@ -199,7 +238,7 @@
 {
     to
     {
-        border-width: 3px;
+        border-width: 0.2em;
         border-style: inset;
         border-color: #dd6600;
         color: #dd6600;
@@ -218,7 +257,7 @@
 {
     to
     {
-        border-width: 3px;
+        border-width: 0.2em;
         border-style: inset;
         border-color: #ddaa00;
         color: #ddaa00;
@@ -237,7 +276,7 @@
 {
     to
     {
-        border-width: 3px;
+        border-width: 0.2em;
         border-style: inset;
         border-color: #339900;
         color: #339900;
@@ -256,7 +295,7 @@
 {
     to
     {
-        border-width: 3px;
+        border-width: 0.2em;
         border-style: inset;
         border-color: #009977;
         color: #009977;
@@ -275,7 +314,7 @@
 {
     to
     {
-        border-width: 3px;
+        border-width: 0.2em;
         border-style: inset;
         border-color: #6600aa;
         color: #6600aa;

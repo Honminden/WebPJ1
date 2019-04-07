@@ -3,15 +3,16 @@
     display: inline;
     background-color: #bb0000;
     color: #ffffff;
-    border-width: 10px;
+    border-width: 0.5em;
     border-style: solid;
     border-color: #bb0000;
     border-radius: 25%/100%;
+    margin: 0.5em;
     position: relative;
     
     z-index: 3;
     
-    box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 0.2em #000000;
     
     user-select: none;
 }
@@ -24,6 +25,36 @@
     left: 0;
     right: 0;
     height: 80vmin;
+    
+    -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+#popular nav:hover
+{
+    filter: brightness(1.2);
+}
+
+#popular label
+{
+    display: none;
+    
+    padding: 1em;
+    color: #444444;
+    font-size: xx-large;
+    font-weight: bolder;
+    
+    cursor: pointer;
+}
+
+#popular nav:hover label
+{
+    display: block;
+    position: absolute;
+    
+    box-shadow: 0 0 10em #ffffff;
+    
+    z-index: 3;
 }
 
 #popular img
@@ -31,9 +62,15 @@
     max-width: 80vw;
     max-height: 80vmin;
     position: relative;
-    box-shadow: 0 0 4vmin #000000;
+    box-shadow: 0 0 4vmin rgba(0,0,0,0.8);
     
     animation: switchImage 5000ms ease-in-out infinite;
+}
+
+#popular nav:hover img
+{
+    filter: brightness(150%) blur(0.05em);
+    box-shadow: 0 0 2vmin #000000;
 }
 
 @keyframes switchImage

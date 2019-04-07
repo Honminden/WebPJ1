@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <title>HMD Art, the best online gallery</title>
   <link rel="stylesheet" type="text/css" href="base.css">
-  <script src="form.js"></script>
-  <script src="image.js"></script>
 </head>
 <body>
     <header class="linearBackground">
@@ -15,10 +13,10 @@
         </h1>
 
         <nav id="top_nav" class="linearBackground">
-            <a id="home" class="iconfont" href="https://www.amazon.com">M</a>
+            <a id="home" class="iconfont" href="#">M</a>
 
-            <a id="user" class="iconfont" href="https://www.amazon.com">I</a>
-            <form class="linearBackground" novalidate onsubmit="return submitCheck(this)">
+            <a id="user" class="iconfont" href="#">I</a>
+            <form id="user_form" class="linearBackground" method="post" novalidate autocomplete="off" onsubmit="return submitCheck(this)">
                 <span onclick="displayLogin(this)">Login</span>
                 <span onclick="displaySignUp(this)">Sign up</span>
 
@@ -27,58 +25,69 @@
                         Username
                     </label>
                     <label class="validation"></label>
-                    <input id="username" name="username" type="text" oninput="validate(this)" autocomplete="off">
+                    <input id="username" name="username" type="text" oninput="validate(this)">
 
                     <label for="password">
                         Password
                     </label>
                     <label class="validation"></label>
-                    <input id="password" name="password" type="password" oninput="validate(this)" autocomplete="off">
+                    <input id="password" name="password" type="password" oninput="validate(this)">
 
                     <label for="conform_password">
                         Conform Pwd.
                     </label>
                     <label class="validation"></label>
-                    <input id="conform_password" name="conform_password" type="password" oninput="validate(this)" autocomplete="off">
+                    <input id="conform_password" name="conform_password" type="password" oninput="validate(this)">
 
                     <label for="email">
                         Email
                     </label>
                     <label class="validation"></label>
-                    <input id="email" name="email" type="email" oninput="validate(this)" autocomplete="off">
+                    <input id="email" name="email" type="email" oninput="validate(this)">
+
+                    <label for="CAPTCHA">
+                        CAPTCHA
+                    </label>
+                    <label class="validation"></label>
+                    <img><img><img><img><span onclick="createCAPTCHA()">change</span>
+                    <input id="CAPTCHA" name="CAPTCHA" type="text" oninput="validate(this)">
 
                     <label for="agree">
-                        I agree on the <a href="https://www.amazon.com">terms of use</a>.
+                        I agree on the <a href="#">terms of use</a>.
                     </label>
                     <label class="validation"></label>
                     <input id="agree" name="agree" type="checkbox">
+
+
                 </div>
 
                 <div id="login">
-                    <label for="username">
+                    <label for="login_username">
                         Username
                     </label>
-                    <input id="username" name="username" type="text" autocomplete="off">
-                    <label for="password">
+                    <input id="login_username" name="username" type="text">
+                    <label for="login_password">
                         Password
                     </label>
-                    <input id="password" name="password" type="password" autocomplete="off">
+                    <input id="login_password" name="password" type="password">
                 </div>
 
-                <input name="submit" type="submit" value="submit">
+                <div id="detail">
+                    <p id="welcome"></p>
+				</div>
 
-                <script>displayLogin();</script>
+                <input name="submit" type="submit" value="submit">
             </form>
 
-            <a id="cart" class="iconfont" href="https://www.amazon.com">K</a>
+            <a id="cart" class="iconfont" href="#">K</a>
 
-            <a id="collection" class="iconfont" href="https://www.amazon.com">P</a>
+            <a id="collection" class="iconfont" href="#">P</a>
 
-            <a id="language" class="iconfont" href="https://www.amazon.com">N</a>
+            <a id="language" class="iconfont" href="#">N</a>
 
-            <a id="help" class="iconfont" href="https://www.amazon.com">L</a>
+            <a id="help" class="iconfont" href="#">L</a>
 
-            <a id="search" class="iconfont" href="https://www.amazon.com">O</a>
+            <a id="search" class="iconfont" href="#">O</a>
         </nav>
     </header>
 
@@ -91,14 +100,12 @@
                 POPULAR
             </h2>
 
-            <nav class="linearBackground">
-                <a href="https://www.amazon.com">
+            <a href="welcome.html">
+                <nav class="linearBackground">
+                    <label class="linearBackground"></label>
                     <img alt="popular works">
-                </a>
-            </nav>
-            <script>
-                startSwitch();
-            </script>
+                </nav>
+            </a>
         </div>
 
         <br><br><br><br><br><br><br><br>
@@ -109,5 +116,16 @@
     <footer>
         Developed by Honminden in 2019. Visit her <a href="https://github.com/Honminden" target="_blank">Github page</a>.
     </footer>
+
+
+    <script src="form.js" type="text/javascript"></script>
+    <script src="image.js" type="text/javascript"></script>
+    <script>
+        createCAPTCHA();
+        startSwitch();
+        displayLogin();
+        changeLoginIcon();
+        showUserDetail();
+	</script>
 </body>
 </html>
