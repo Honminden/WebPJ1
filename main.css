@@ -35,16 +35,89 @@ hr
 
 header
 {
-    
-    
     box-shadow: 0 0 5px #000000;
+}
+
+main
+{
+    margin-top: 5vh;
 }
 
 footer
 {
+    position: relative;
+    top: 5em;
     padding: 1em;
     font-size: 1em;
-    color: #444444;
+    color: rgba(255,255,255,0.7);
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+}
+
+footer a
+{
+    color: rgba(255,255,255,0.9);
+}
+
+@keyframes footer
+{
+    0%
+    {
+        background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+        font-weight: lighter;
+        font-size: 0.8em;
+    }
+    25%
+    {
+        background: linear-gradient(to right, rgba(128,0,0,0.6), rgba(128,0,0,0.9), rgba(128,0,0,0.6));
+        font-weight: bolder;
+        font-size: 1.4em;
+    }
+    50%
+    {
+        background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.9), rgba(0,0,0,0.6));
+        font-weight: lighter;
+        font-size: 0.8em;
+    }
+    75%
+    {
+        background: linear-gradient(to right, rgba(0,0,128,0.6), rgba(0,0,128,0.9), rgba(0,0,128,0.6));
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+footer:hover
+{
+    animation: footer 1000ms ease-in-out infinite;
+}
+
+@keyframes footerA
+{
+    0%
+    {
+        font-weight: lighter;
+        font-size: 0.8em;
+    }
+    25%
+    {
+        font-weight: bolder;
+        font-size: 1.4em;
+    }
+    50%
+    {
+        font-weight: lighter;
+        font-size: 0.8em;
+    }
+    75%
+    {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+}
+
+footer:hover a
+{
+    animation: footerA 1000ms ease-in-out infinite;
 }
 
 #bonus
@@ -88,7 +161,154 @@ footer
     }
 }
 
-main
+.slide
 {
     animation: slide 500ms ease-in-out forwards;
+}
+
+.quick_slide
+{
+    animation: slide 200ms ease-in-out forwards;
+}
+
+#search_value, #cart_title, #item_amount, #user_title
+{
+    padding: 2em;
+    left: 0;
+    right: 0;
+}
+
+main#user #update_title, main#user #purchase_order, main#user #sell_order
+{
+    padding-top: 3em;
+    padding-left: 1em;
+    left: 0;
+    right: 0;
+}
+
+#row
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    left: 0;
+    right: 0;
+    
+    margin-top: 2em;
+    padding: 1em;
+}
+
+#row #item
+{
+    font-size: 1.2em;
+    text-decoration: none;
+    
+    padding: 1em;
+}
+
+@keyframes itemBrighten
+{
+    to
+    {
+        background-color: rgba(255,255,255,0.9);
+    }
+}
+
+#row a#item:hover
+{
+    animation: itemBrighten 500ms ease-in-out forwards;
+}
+
+#row #item #title
+{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#row #item #price
+{
+    color: #aa0022;
+    font-size: 1.5em;
+}
+
+#row #item #description
+{
+    font-size: 0.6em;
+}
+
+#pages
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    right: 0;
+    margin: 2em 0;
+}
+
+#pages #page_number
+{
+    font-size: 2em;
+    
+    user-select: none;
+    cursor: pointer;
+}
+
+#pages #page_number:hover
+{
+    color: #666666;
+}
+
+#cart #total_price
+{
+    padding-left: 1em;
+    color: #aa0022;
+    font-size: 2em;
+}
+
+main#user
+{
+    margin-left: 40vw;
+}
+
+#order *
+{
+    font-size: 0.5em;
+    color: #666666;
+}
+
+#user_info
+{
+    float: left;
+    margin-top: 2em;
+    margin-left: 1em;
+    padding: 1em;
+    max-width: 30vw;
+}
+
+#user_info p
+{
+    padding: 1em;
+}
+
+#user_info #deposit
+{
+    display: block;
+    
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba(32,128,32,0.5);
+    
+    margin-top: 2em;
+    padding: 0.5em;
+    
+    user-select: none;
+    cursor: pointer;
+}
+
+#user_info #deposit:hover
+{
+    background-color: rgba(224,255,224,0.9);
 }

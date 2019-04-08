@@ -13,10 +13,10 @@
         </h1>
 
         <nav id="top_nav" class="linearBackground">
-            <a id="home" class="iconfont" href="#">M</a>
+            <a id="home" class="iconfont" href="welcome.html">M</a>
 
             <a id="user" class="iconfont" href="#">I</a>
-            <form id="user_form" class="linearBackground" method="post" novalidate autocomplete="off" onsubmit="return submitCheck(this)">
+            <form id="user_form" class="linearBackground quick_slide" method="post" novalidate autocomplete="off" onsubmit="return submitCheck(this)">
                 <span onclick="displayLogin(this)">Login</span>
                 <span onclick="displaySignUp(this)">Sign up</span>
 
@@ -79,7 +79,39 @@
                 <input name="submit" type="submit" value="submit">
             </form>
 
-            <a id="cart" class="iconfont" href="#">K</a>
+            <a id="cart" class="iconfont" href="cart.html">K</a>
+			<div id="cart_container" class="linearBackground quick_slide">
+				<h2 id="item_amount">118 items in your cart</h2>
+		        <div id="row">
+		            <a id="item" href="detail.html">
+		                <img src="images/works/square-small/111030.jpg" id="thumbnail">
+		                <p id="title">LongTitle</p>
+		                <p id="price">$114514</p>
+		                <p id="artist">Mr.Li</p>
+		                <p id="description">good bad silly ok right poor cool excellent</p>
+		            </a>
+		            <a id="item" href="detail.html">
+		                <img src="images/works/square-small/111030.jpg" id="thumbnail">
+		                <p id="title">LongTitle</p>
+		                <p id="price">$114514</p>
+		                <p id="artist">Mr.Li</p>
+		                <p id="description">good bad silly ok right poor cool excellent</p>
+		            </a>
+		            <a id="item" href="detail.html">
+		                <img src="images/works/square-small/111030.jpg" id="thumbnail">
+		                <p id="title">LongTitle</p>
+		                <p id="price">$114514</p>
+		                <p id="artist">Mr.Li</p>
+		                <p id="description">good bad silly ok right poor cool excellent</p>
+		            </a>
+				</div>
+
+				<div id="pages">
+					<span id="left" class="iconfont">E</span>
+					<span id="page_number">1</span><span id="page_number">2</span><span id="page_number">...</span><span id="page_number">40</span>
+		            <span id="right" class="iconfont">F</span>
+				</div>
+			</div>
 
             <a id="collection" class="iconfont" href="#">P</a>
 
@@ -87,20 +119,24 @@
 
             <a id="help" class="iconfont" href="#">L</a>
 
-            <a id="search" class="iconfont" href="#">O</a>
+            <a id="search" class="iconfont" href="search.html">O</a>
+            <form id="search_form" class="linearBackground quick_slide" method="post" novalidate autocomplete="off">
+                <input id="search_input" name="search_input" type="text">
+				<input name="search_submit" type="submit" value="search">
+			</form>
         </nav>
     </header>
 
     <hr>
 
-    <main>
+    <main class="slide">
         <div id="popular">
             <br>
             <h2>
                 POPULAR
             </h2>
 
-            <a href="welcome.html">
+            <a href="detail.html">
                 <nav class="linearBackground">
                     <label class="linearBackground"></label>
                     <img alt="popular works">
@@ -108,10 +144,7 @@
             </a>
         </div>
 
-        <br><br><br><br><br><br><br><br>
     </main>
-
-    <hr>
 
     <footer>
         Developed by Honminden in 2019. Visit her <a href="https://github.com/Honminden" target="_blank">Github page</a>.

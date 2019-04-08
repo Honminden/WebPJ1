@@ -293,13 +293,16 @@ function getcookie()
 
 function changeLoginIcon()
 {
+    let user = document.querySelector("#top_nav #user");
+
     if (getLoginCookie() !== undefined && getLoginCookie() !== "")
     {
-        document.querySelector("#top_nav #user").innerHTML = "J";
+        user.innerHTML = "J";
+        user.href = "user.html";
     }
     else
     {
-        document.querySelector("#top_nav #user").innerHTML = "I";
+        user.innerHTML = "I";
     }
 }
 
@@ -322,5 +325,16 @@ function showUserDetail()
         document.querySelector("#login").style.display = "block";
         document.querySelector("#detail #welcome").innerHTML = "";
         document.querySelector("#user_form>input").setAttribute("value", "submit");
+
+        if (document.querySelector("main#user") !== null)
+        {
+            document.querySelector("#user_info").style.display = "none";
+            let userItems = document.querySelectorAll("main#user *:not(h2)");
+            for (let i = 0; i < userItems.length; i++)
+            {
+                userItems[i].style.display = "none";
+            }
+            document.querySelector("main#user h2").innerHTML = "Please login first.";
+        }
     }
 }
