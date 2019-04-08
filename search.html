@@ -7,93 +7,125 @@
 </head>
 <body>
     <header class="linearBackground">
-        <h1>
-            <a class="iconfont" id="logo">B</a>
-            HMD Art&trade; <small>, the best online gallery</small>
-        </h1>
+                     <h1>
+                         <a class="iconfont" id="logo">B</a>
+                         HMD Art&trade; <small>, the best online gallery</small>
+                     </h1>
 
-        <nav id="top_nav" class="linearBackground">
-            <a id="home" class="iconfont" href="welcome.html">M</a>
+                     <nav id="top_nav" class="linearBackground">
+                         <a id="home" class="iconfont" href="welcome.html">M</a>
 
-            <a id="user" class="iconfont" href="#">I</a>
-            <form id="user_form" class="linearBackground" method="post" novalidate autocomplete="off" onsubmit="return submitCheck(this)">
-                <span onclick="displayLogin(this)">Login</span>
-                <span onclick="displaySignUp(this)">Sign up</span>
+                         <a id="user" class="iconfont" href="#">I</a>
+                         <form id="user_form" class="linearBackground quick_slide" method="post" novalidate autocomplete="off" onsubmit="return submitCheck(this)">
+                             <span onclick="displayLogin(this)">Login</span>
+                             <span onclick="displaySignUp(this)">Sign up</span>
 
-                <div id="sign_up">
-                    <label for="username">
-                        Username
-                    </label>
-                    <label class="validation"></label>
-                    <input id="username" name="username" type="text" oninput="validate(this)">
+                             <div id="sign_up">
+                                 <label for="username">
+                                     Username
+                                 </label>
+                                 <label class="validation"></label>
+                                 <input id="username" name="username" type="text" oninput="validate(this)">
 
-                    <label for="password">
-                        Password
-                    </label>
-                    <label class="validation"></label>
-                    <input id="password" name="password" type="password" oninput="validate(this)">
+                                 <label for="password">
+                                     Password
+                                 </label>
+                                 <label class="validation"></label>
+                                 <input id="password" name="password" type="password" oninput="validate(this)">
 
-                    <label for="conform_password">
-                        Conform Pwd.
-                    </label>
-                    <label class="validation"></label>
-                    <input id="conform_password" name="conform_password" type="password" oninput="validate(this)">
+                                 <label for="conform_password">
+                                     Conform Pwd.
+                                 </label>
+                                 <label class="validation"></label>
+                                 <input id="conform_password" name="conform_password" type="password" oninput="validate(this)">
 
-                    <label for="email">
-                        Email
-                    </label>
-                    <label class="validation"></label>
-                    <input id="email" name="email" type="email" oninput="validate(this)">
+                                 <label for="email">
+                                     Email
+                                 </label>
+                                 <label class="validation"></label>
+                                 <input id="email" name="email" type="email" oninput="validate(this)">
 
-                    <label for="CAPTCHA">
-                        CAPTCHA
-                    </label>
-                    <label class="validation"></label>
-                    <img><img><img><img><span onclick="createCAPTCHA()">change</span>
-                    <input id="CAPTCHA" name="CAPTCHA" type="text" oninput="validate(this)">
+                                 <label for="CAPTCHA">
+                                     CAPTCHA
+                                 </label>
+                                 <label class="validation"></label>
+                                 <img><img><img><img><span onclick="createCAPTCHA()">change</span>
+                                 <input id="CAPTCHA" name="CAPTCHA" type="text" oninput="validate(this)">
 
-                    <label for="agree">
-                        I agree on the <a href="#">terms of use</a>.
-                    </label>
-                    <label class="validation"></label>
-                    <input id="agree" name="agree" type="checkbox">
+                                 <label for="agree">
+                                     I agree on the <a href="#">terms of use</a>.
+                                 </label>
+                                 <label class="validation"></label>
+                                 <input id="agree" name="agree" type="checkbox">
 
 
-                </div>
+                             </div>
 
-                <div id="login">
-                    <label for="login_username">
-                        Username
-                    </label>
-                    <input id="login_username" name="username" type="text">
-                    <label for="login_password">
-                        Password
-                    </label>
-                    <input id="login_password" name="password" type="password">
-                </div>
+                             <div id="login">
+                                 <label for="login_username">
+                                     Username
+                                 </label>
+                                 <input id="login_username" name="username" type="text">
+                                 <label for="login_password">
+                                     Password
+                                 </label>
+                                 <input id="login_password" name="password" type="password">
+                             </div>
 
-                <div id="detail">
-                    <p id="welcome"></p>
-				</div>
+                             <div id="detail">
+                                 <p id="welcome"></p>
+             				</div>
 
-                <input name="submit" type="submit" value="submit">
-            </form>
+                             <input name="submit" type="submit" value="submit">
+                         </form>
 
-            <a id="cart" class="iconfont" href="cart.html">K</a>
+                         <a id="cart" class="iconfont" href="cart.html">K</a>
+             			<div id="cart_container" class="linearBackground quick_slide">
+             				<h2 id="item_amount">118 items in your cart</h2>
+             		        <div id="row">
+             		            <a id="item" href="detail.html">
+             		                <img src="images/works/square-small/111030.jpg" id="thumbnail">
+             		                <p id="title">LongTitle</p>
+             		                <p id="price">$114514</p>
+             		                <p id="artist">Mr.Li</p>
+             		                <p id="description">good bad silly ok right poor cool excellent</p>
+             		            </a>
+             		            <a id="item" href="detail.html">
+             		                <img src="images/works/square-small/111030.jpg" id="thumbnail">
+             		                <p id="title">LongTitle</p>
+             		                <p id="price">$114514</p>
+             		                <p id="artist">Mr.Li</p>
+             		                <p id="description">good bad silly ok right poor cool excellent</p>
+             		            </a>
+             		            <a id="item" href="detail.html">
+             		                <img src="images/works/square-small/111030.jpg" id="thumbnail">
+             		                <p id="title">LongTitle</p>
+             		                <p id="price">$114514</p>
+             		                <p id="artist">Mr.Li</p>
+             		                <p id="description">good bad silly ok right poor cool excellent</p>
+             		            </a>
+             				</div>
 
-            <a id="collection" class="iconfont" href="#">P</a>
+             				<div id="pages">
+             					<span id="left" class="iconfont">E</span>
+             					<span id="page_number">1</span><span id="page_number">2</span><span id="page_number">...</span><span id="page_number">40</span>
+             		            <span id="right" class="iconfont">F</span>
+             				</div>
+             			</div>
 
-            <a id="language" class="iconfont" href="#">N</a>
+                         <a id="collection" class="iconfont" href="#">P</a>
 
-            <a id="help" class="iconfont" href="#">L</a>
+                         <a id="language" class="iconfont" href="#">N</a>
 
-            <a id="search" class="iconfont" href="search.html">O</a>
-            <form id="search_form" class="linearBackground" method="post" novalidate autocomplete="off">
-                <input id="search_input" name="search_input" type="text">
-				<input name="search_submit" type="submit" value="search">
-			</form>
-        </nav>
-    </header>
+                         <a id="help" class="iconfont" href="#">L</a>
+
+                         <a id="search" class="iconfont" href="search.html">O</a>
+                         <form id="search_form" class="linearBackground quick_slide" method="post" novalidate autocomplete="off">
+                             <input id="search_input" name="search_input" type="text">
+             				<input name="search_submit" type="submit" value="search">
+             			</form>
+                     </nav>
+                 </header>
 
     <main id="search">
         <h2 id="search_value" class="linearBackground">Results of "ArtistSomebody"</h2>
