@@ -1,0 +1,197 @@
+#popular h2
+{
+    display: inline;
+    background-color: #bb0000;
+    color: #ffffff;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: #bb0000;
+    border-radius: 25%/100%;
+    margin: 0.5em;
+    position: relative;
+    
+    z-index: 3;
+    
+    box-shadow: 0 0 0.2em #000000;
+    
+    user-select: none;
+}
+
+#popular nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    left: 0;
+    right: 0;
+    height: 80vmin;
+    
+    -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+#popular nav:hover
+{
+    filter: brightness(1.2);
+}
+
+#popular label
+{
+    display: none;
+    
+    padding: 1em;
+    color: #444444;
+    font-size: xx-large;
+    font-weight: bolder;
+    
+    cursor: pointer;
+}
+
+#popular nav:hover label
+{
+    display: block;
+    position: absolute;
+    
+    box-shadow: 0 0 10em #ffffff;
+    
+    z-index: 3;
+}
+
+#popular img
+{
+    max-width: 80vw;
+    max-height: 80vmin;
+    position: relative;
+    box-shadow: 0 0 4vmin rgba(0,0,0,0.8);
+    
+    animation: switchImage 5000ms ease-in-out infinite;
+}
+
+#popular nav:hover img
+{
+    filter: brightness(150%) blur(0.05em);
+    box-shadow: 0 0 2vmin #000000;
+}
+
+@keyframes switchImage
+{
+    0%
+    {
+        opacity: 0;
+    }
+    5%
+    {
+        opacity: 0;
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    90%
+    {
+        opacity: 1;
+    }
+    95%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+#detailed_art
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 1em;
+    left: 0;
+    right: 0;
+    height: 60vmin;
+    
+    -webkit-mask-image: linear-gradient(to bottom,
+    rgba(0,0,0,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+#detailed_art img
+{
+    max-width: 60vw;
+    height: 60vmin;
+    position: relative;
+    box-shadow: 0 0 2px rgba(0,0,0,0.8);
+    
+    z-index: -1;
+}
+
+#detailed_art #scope
+{
+    position: fixed;
+    display: none;
+    
+    width: 30vmin;
+    height: 30vmin;
+    
+    z-index: 4;
+    
+    -webkit-mask-image: radial-gradient(rgba(0,0,0,1) 13vmin, rgba(0,0,0,0) 15vmin);
+}
+
+#detailed
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 2em;
+    width: 100vw;
+    padding: 1em;
+    
+    box-shadow: 0 0 4vmin rgba(0,0,0,0.8);
+}
+
+#detailed div
+{
+    max-width: 30vw;
+}
+
+#detailed #description
+{
+    margin: 0.5em;
+}
+
+#detailed #price
+{
+    color: #aa0022;
+    font-size: 2em;
+}
+
+#detailed table, #detailed caption, #detailed th, #detailed td
+{
+    border: transparent 1px solid;
+    border-collapse: collapse;
+    padding: 1em;
+}
+
+#detailed caption
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#detailed table
+{
+    margin: 1em;
+    width: 60vw;
+}
+
+#detailed tr
+{
+    background-color: rgba(0,0,0,0.2);
+}
+
+#detailed tr.alt, #detailed caption
+{
+    background-color: rgba(255,255,255,0.2);
+}
